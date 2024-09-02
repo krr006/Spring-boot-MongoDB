@@ -49,9 +49,10 @@
 
 ### 2. Клонирование репозитория
 
-Перед началом установки клонируйте репозиторий с исходным кодом приложения:
 
-    ```bash
+1. Перед началом установки клонируйте репозиторий с исходным кодом приложения:
+
+    ``` bash
     git clone https://github.com/krr006/Spring-boot-MongoDB.git
     cd Spring-boot-MongoDB
 
@@ -62,13 +63,10 @@
 1. Запустите PostgreSQL и создайте новую базу данных и таблицы:
 
    ```sql
-   -- Создание базы данных
    CREATE DATABASE postgres;
 
-   -- Подключение к базе данных
    \c postgres;
 
-   -- Создание таблицы для пользователей
    CREATE TABLE app_users (
        id SERIAL PRIMARY KEY,
        email VARCHAR(255) NOT NULL UNIQUE,
@@ -92,8 +90,8 @@
 2. Обновите настройки подключения в `application.yaml`: 
     ```yaml
    spring:
-     data:
-       mongodb:
+      data:
+         mongodb:
          host: localhost
          port: 27017
          database: text_record_db
@@ -126,7 +124,6 @@
 
 Фронтенд будет доступен по адресу `http://localhost:3000`.
 
-
-
+## Обзор функциональности
 
 
