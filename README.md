@@ -131,7 +131,7 @@
 их содержимому или уникальному номеру `id`:
 ![Main page](project-test/src/main/resources/static/images/Main_page.png)
 
-3. Пример поиска редактирования записи:
+3. Пример редактирования записи:
 ![Editing](project-test/src/main/resources/static/images/Editing.png)
 
 4. Пример поиска по содержимому:
