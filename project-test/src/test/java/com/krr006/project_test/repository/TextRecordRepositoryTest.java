@@ -2,7 +2,9 @@ package com.krr006.project_test.repository;
 
 import com.krr006.project_test.entity.TextRecord;
 import com.krr006.project_test.service.SequenceGeneratorService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,6 +22,12 @@ public class TextRecordRepositoryTest {
     @MockBean
     private SequenceGeneratorService sequenceGeneratorService;
 
+
+    @BeforeEach
+    void setUp() {
+        textRecordRepository.deleteAll();
+        Mockito.when(sequenceGeneratorService.getNextSequence("texts_seq")).thenReturn(1L);
+    }
 
     @Test
     public void testFindByUserId() {

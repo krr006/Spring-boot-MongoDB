@@ -33,19 +33,14 @@
 #### Установите необходимые инструменты:
 
 1. **Java 17**: Убедитесь, что Java 17 установлена на вашей машине.
-    - [Инструкция по установке](https://adoptium.net/temurin/releases/?version=17)
 
 2. **Maven**: Убедитесь, что Apache Maven установлен.
-    - [Инструкция по установке](https://maven.apache.org/install.html)
 
 3. **PostgreSQL**: Установите PostgreSQL для хранения данных пользователей.
-    - [Инструкция по установке](https://www.postgresql.org/download/)
 
 4. **MongoDB**: Установите MongoDB для хранения текстовых записей.
-    - [Инструкция по установке](https://www.mongodb.com/try/download/community)
 
 5. **Node.js и npm**: Установите Node.js версии 18 и выше.
-    - [Инструкция по установке](https://nodejs.org/)
 
 ### 2. Клонирование репозитория
 
@@ -113,6 +108,8 @@
 ### 5. Запуск фронтенда (React)
 
 1. Перейдите в директорию `sec-app`:
+   ```bash
+   cd sec-app
 
 2. Установите зависимости:
     ```bash
@@ -125,5 +122,22 @@
 Фронтенд будет доступен по адресу `http://localhost:3000`.
 
 ## Обзор функциональности
+
+1. При переходе по адресу `http://localhost:3000` будет предложено войти в систему или, если еще нет аккаунта, создать его, 
+а после уже войти в систему с помощью `username` и `password`:
+![Login page](project-test/src/main/resources/static/images/Login_page.png)
+
+2. После входа откроется главная страница, где можно создавать, редактировать, удалять и выполнять поиск записей по 
+их содержимому или уникальному номеру `id`:
+![Main page](project-test/src/main/resources/static/images/Main_page.png)
+
+3. Пример поиска редактирования записи:
+![Editing](project-test/src/main/resources/static/images/Editing.png)
+
+4. Пример поиска по содержимому:
+![Search](project-test/src/main/resources/static/images/Search.png)
+
+5. Пример поиска по `id` записи:
+![SearchById](project-test/src/main/resources/static/images/SearchById.png)
 
 
