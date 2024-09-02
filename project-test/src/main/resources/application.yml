@@ -1,0 +1,32 @@
+jwt:
+  secret: 9dshcjdcjdjndjncjdncd9vdcskvkdncsmmskcmkvmdmfmvdksnanwajkuvidvhjdh3jdssxs
+  lifetime: 30m
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: text_record_db
+
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+
+
+
+server:
+  port:
+    8080
+
