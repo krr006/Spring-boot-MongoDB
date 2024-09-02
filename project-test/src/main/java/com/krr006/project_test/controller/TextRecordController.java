@@ -58,9 +58,7 @@ public class TextRecordController {
     @GetMapping("/search")
     public List<TextRecordResponse> searchTexts(
             @RequestParam(required = false) Long id,
-            @RequestBody(required = false) TextRecordRequest textRecordRequest) {
-
-        String data = (textRecordRequest != null) ? textRecordRequest.getData() : null;
+            @RequestParam(required = false) String data) {
 
         return textRecordService.searchTexts(id, data).stream()
                 .map(record -> new TextRecordResponse(record.getId(), record.getData()))
