@@ -91,6 +91,11 @@ public class TextRecordService {
             return textRecordRepository.findByDataContaining(data).stream()
                     .filter(record -> record.getUserId().equals(userId))
                     .toList();
+        } else if (id != null) {
+            TextRecord textRecord = textRecordRepository.findById(id).orElseThrow(() -> new TextRecordNotFoundException(id));
+            if (textRecord.getUserId().equals(userId)) {
+                return List.of(textRecord);
+            } else throw new SecurityException("You do not have permission to update this record.");
         } else {
             return textRecordRepository.findByUserId(userId);
         }
