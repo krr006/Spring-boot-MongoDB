@@ -87,18 +87,26 @@ public class TextRecordService {
             return textRecordRepository.findByIdAndDataContaining(id, data).stream()
                     .filter(record -> record.getUserId().equals(userId))
                     .toList();
-        } else if (data != null) {
+        }
+
+        if (data != null) {
             return textRecordRepository.findByDataContaining(data).stream()
                     .filter(record -> record.getUserId().equals(userId))
                     .toList();
-        } else if (id != null) {
-            TextRecord textRecord = textRecordRepository.findById(id).orElseThrow(() -> new TextRecordNotFoundException(id));
+        }
+
+        if (id != null) {
+            TextRecord textRecord = textRecordRepository.findById(id)
+                    .orElseThrow(() -> new TextRecordNotFoundException(id));
+
             if (textRecord.getUserId().equals(userId)) {
                 return List.of(textRecord);
-            } else throw new SecurityException("You do not have permission to update this record.");
-        } else {
-            return textRecordRepository.findByUserId(userId);
+            } else {
+                throw new SecurityException("You do not have permission to access this record.");
+            }
         }
+
+        return textRecordRepository.findByUserId(userId);
     }
 
     private String getCurrentUserId() {
