@@ -62,7 +62,7 @@ public class TextRecordController {
 
         return textRecordService.searchTexts(id, data).stream()
                 .map(record -> new TextRecordResponse(record.getId(), record.getData()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @DeleteMapping("/{id}")
