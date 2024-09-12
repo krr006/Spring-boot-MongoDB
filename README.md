@@ -36,11 +36,11 @@
 
 2. **Maven**: Убедитесь, что Apache Maven установлен.
 
-3. **PostgreSQL**: Установите PostgreSQL для хранения данных пользователей.
+3. **PostgreSQL**: Установите `PostgreSQL` для хранения данных пользователей.
 
 4. **MongoDB**: Установите MongoDB для хранения текстовых записей.
 
-5. **Node.js и npm**: Установите Node.js версии 18 и выше.
+5. **Node.js и npm**: Установите `Node.js` версии 18 и выше.
 
 ### 2. Клонирование репозитория
 
@@ -48,14 +48,14 @@
 1. Перед началом установки клонируйте репозиторий с исходным кодом приложения:
 
     ``` bash
-    git clone https://github.com/krr006/Spring-boot-MongoDB.git
+    https://github.com/krr006/Text-Library-Spring-MongoDB.git
     cd Spring-boot-MongoDB
 
 ### 3. Настройка базы данных
 
 #### PostgreSQL:
 
-1. Запустите PostgreSQL и создайте новую базу данных и таблицы:
+1. Запустите `PostgreSQL` и создайте новую базу данных и таблицы:
 
    ```sql
    CREATE DATABASE postgres;
@@ -81,7 +81,7 @@
 
 #### MongoDB:
 
-1. Запустите MongoDB на порту по умолчанию (`27017`).
+1. Запустите `MongoDB` на порту по умолчанию (`27017`).
 2. Обновите настройки подключения в `application.yaml`: 
     ```yaml
    spring:
