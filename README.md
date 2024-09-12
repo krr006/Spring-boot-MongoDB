@@ -49,7 +49,7 @@
 
     ``` bash
     https://github.com/krr006/Text-Library-Spring-MongoDB.git
-    cd Spring-boot-MongoDB
+    cd Text-Library-Spring-MongoDB
 
 ### 3. Настройка базы данных
 
